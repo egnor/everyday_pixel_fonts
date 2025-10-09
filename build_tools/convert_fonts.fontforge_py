@@ -1,0 +1,48 @@
+#!/usr/bin/env -S fontforge -lang=py -script
+"""Converts .ttf files to .bdf and thence to u8g2 .c files.
+This script runs in fontforge's embedded Python interpreter."""
+
+import fontforge
+import platform
+import subprocess
+import sys
+from pathlib import Path
+
+top_dir = Path(__file__).parent.parent
+try: top_dir = top_dir.relative_to(Path.cwd())
+except ValueError: pass
+
+ttf_paths = list(sorted((top_dir / "originals").glob("**/*.ttf")))
+if not ttf_paths:
+    raise SystemExit(f"💥 No .ttf files in: {originals_dir}")
+
+arch = f"{platform.machine().lower()}-{platform.system().lower()}"
+bdfconv_path = top_dir / "build_tools" / f"{arch}-bdfconv.exe"
+if not bdfconv_path.is_file():
+    raise SystemExit(f"💥 Converter not found: {bdfconv_path}")
+
+for ttf_path in ttf_paths:
+    print(f"\n🔠 Converting: {ttf_path}")
+    ttf_font = fontforge.open(str(ttf_path))
+
+    pixel_size = ttf_font.em // 128
+    print(f"↕️ Generating bitmap: size={ttf_font.em} => pixels={pixel_size}")
+    ttf_font.selection.all()
+    ttf_font.bitmapSizes = ((pixel_size,),)
+    ttf_font.regenBitmaps(ttf_font.bitmapSizes)
+
+    bdf_path = top_dir / "bdf_conversions" / (ttf_path.stem + ".bdf")
+    bdf_path.parent.mkdir(parents=True, exist_ok=True)
+    old_paths = list(bdf_path.parent.glob(bdf_path.stem + "-*.bdf"))
+    old_paths.extend(bdf_path.parent.glob(bdf_path.stem + ".bdf"))
+    for old_path in old_paths:
+        print(f"🗑️ Deleting: {old_path}")
+        old_path.unlink()
+
+    print(f"👾 Saving bitmap: {bdf_path}")
+    ttf_font.generate(str(bdf_path))
+    ttf_font.close()
+
+    u8g2_path = top_dir / "src" / (ttf_path.stem + ".c")
+    u8g2_path.parent.mkdir(parents=True, exist_ok=True)
+    print(f"▀▄ Converting to u8g2: {u8g2_path}")
