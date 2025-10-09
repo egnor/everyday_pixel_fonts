@@ -1,8 +1,18 @@
+[tools]
+python = "3.12"
+uv = "latest"
+
 [settings]
 experimental = true
+python_compile = false
+
+[env]
+_.python.venv = { path = "python_venv.tmp", create = true }
+UV_PROJECT_ENVIRONMENT = "{{config_root}}/python_venv.tmp"
 
 [hooks]
 postinstall = [
   "git lfs install --local",
   "git lfs pull",
+  "uv sync",
 ]
