@@ -4,7 +4,7 @@
   Glyphs: 157/165
   BBX Build Mode: 0
 */
-const uint8_t everyday_ample_bold[2057] U8G2_FONT_SECTION("everyday_ample_bold") = 
+const uint8_t u8g2_font_everyday_ample_bold[2057] U8G2_FONT_SECTION("u8g2_font_everyday_ample_bold") = 
   "\235\0\3\3\4\4\1\4\5\13\17\0\376\11\376\13\376\1z\3\4\7\354 \5\0\363\2!\7\222q"
   "\342P\42\42\7#\237\42\42\11#\20w\21G\24\271\210B\242\220(r\21E\0$\24\267\17/X"
   "\221D(\61I\260\30\221E(\21I\61\6%\16\231Qc\70\211\231\246;\331\42\303\1&\22\227\21"

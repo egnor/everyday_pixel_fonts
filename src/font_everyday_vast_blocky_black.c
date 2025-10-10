@@ -4,7 +4,7 @@
   Glyphs: 157/165
   BBX Build Mode: 0
 */
-const uint8_t everyday_vast_blocky_black[2129] U8G2_FONT_SECTION("everyday_vast_blocky_black") = 
+const uint8_t u8g2_font_everyday_vast_blocky_black[2129] U8G2_FONT_SECTION("u8g2_font_everyday_vast_blocky_black") = 
   "\235\0\3\3\4\4\1\5\5\16\21\0\376\13\376\15\376\1\205\3&\10\64 \5\0#\6!\10\262\341"
   "\304\203\210\0\42\11\67\61\216H\42\252\14#\23\232\341\226\242Ht\30)\212\204\42\321a\244(\22\1"
   "$\25\270a\236\360 \221Pd\22\331!&\221IF\222\203P\6%\24\273!\17\221\42\253\210&\244"

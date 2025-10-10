@@ -4,7 +4,7 @@
   Glyphs: 157/165
   BBX Build Mode: 0
 */
-const uint8_t everyday_ample_black[2016] U8G2_FONT_SECTION("everyday_ample_black") = 
+const uint8_t u8g2_font_everyday_ample_black[2016] U8G2_FONT_SECTION("u8g2_font_everyday_ample_black") = 
   "\235\0\3\3\4\4\1\4\5\14\17\0\376\11\376\13\376\1o\2\354\7\303 \5\0\363\2!\7\222q"
   "\342P\42\42\7#\237\42\42\11#\17x\61G$\71DDz\71DD\22\0$\23\267\17/X\221"
   "D(\61b\221\26\241D$\305\30\0%\14\231QcX\63Mw\262\25\7&\23\230\61g(\221I"

@@ -4,7 +4,7 @@
   Glyphs: 157/165
   BBX Build Mode: 0
 */
-const uint8_t everyday_slight_blocky[1250] U8G2_FONT_SECTION("everyday_slight_blocky") = 
+const uint8_t u8g2_font_everyday_slight_blocky[1250] U8G2_FONT_SECTION("u8g2_font_everyday_slight_blocky") = 
   "\235\0\2\2\3\4\1\4\4\5\11\0\377\5\377\5\0\0\342\1\322\4\305 \5\200\311\0!\6\251\250"
   "\254\0\42\6\223\314$\25#\12\255\350UCUCU\0$\11\254\330\14\225FJC%\6\244\330\304"
   "\36&\11\254\330\254R\305\221\0'\5\221\254\10(\6\252\270\254\62)\7\252\270\304\224\6*\6\233\311"

@@ -35,7 +35,7 @@ for bdf_path in bdf_paths:
     font_path = src_dir / f"font_{font_name}.c"
     subproc.run(
         bdfconv_path, "-b0", "-f1",
-        f"-n{font_name}", f"-o{font_path}", bdf_path,
+        f"-nu8g2_font_{font_name}", f"-o{font_path}", bdf_path,
     )
 
 logging.info(f"\n🏁 Updated {len(bdf_paths)} u8g2 font files")

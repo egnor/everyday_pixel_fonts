@@ -4,7 +4,7 @@
   Glyphs: 157/165
   BBX Build Mode: 0
 */
-const uint8_t everyday_slight_original[938] U8G2_FONT_SECTION("everyday_slight_original") = 
+const uint8_t u8g2_font_everyday_slight_original[938] U8G2_FONT_SECTION("u8g2_font_everyday_slight_original") = 
   "\235\0\2\2\3\3\1\4\4\5\6\0\1\7\2\7\2\0\334\1\304\3\215 \4\300d!\6iUV"
   "\0\42\6\323f\222\12#\12m\365\252\241\252\241*\0$\11l\355F\212\62\215\4%\6dmb\17"
   "&\10l\355b\212-\5'\5\321V\4(\6j\335T\31)\7j]bJ\12*\6\333eR\7"
