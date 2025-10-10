@@ -13,14 +13,11 @@ except ValueError: pass
 
 ttf_dir = top_dir / "copied_ttfs"
 ttf_paths = list(sorted(ttf_dir.glob("**/*.ttf")))
-if not ttf_paths:
-    raise SystemExit(f"💥 No .ttf files in: {ttf_dir}")
+if not ttf_paths: raise SystemExit(f"💥 Missing: {ttf_dir}/**/*.ttf")
 
 bdf_dir = top_dir / "derived_bdfs"
-old_paths = list(sorted(bdf_dir.parent.glob("**/*.bdf")))
-for old_path in old_paths:
-    print(f"🗑️ Deleting: {old_path}")
-    old_path.unlink()
+print(f"🗑️ Cleaning: {bdf_dir}")
+[p.unlink() for p in bdf_dir.glob("*.bdf")]
 
 for ttf_path in ttf_paths:
     print(f"\n🔠 Converting: {ttf_path}")
@@ -33,10 +30,8 @@ for ttf_path in ttf_paths:
     ttf_font.regenBitmaps(ttf_font.bitmapSizes)
 
     bdf_path = bdf_dir / (ttf_path.stem + ".bdf")
-    bdf_path.parent.mkdir(parents=True, exist_ok=True)
-
     print(f"👾 Saving bitmap: {bdf_path}")
     ttf_font.generate(str(bdf_path))
     ttf_font.close()
 
-print(f"\n🏁 Done converting {len(ttf_paths)} .ttf fonts to .bdf")
+print(f"\n🏁 Updated {len(ttf_paths)} .bdf font files")
