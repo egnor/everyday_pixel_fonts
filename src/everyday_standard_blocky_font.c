@@ -1,3 +1,5 @@
+#include "u8g2_vexed_everyday_fonts.h"
+
 /*
   Fontname: -FontForge-Everyday_Standard_Blocky-Book-R-Normal--6-60-75-75-P-48-ISO10646-1
   Copyright: (null)

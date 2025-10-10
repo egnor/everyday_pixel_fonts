@@ -1,3 +1,5 @@
+#include "u8g2_vexed_everyday_fonts.h"
+
 /*
   Fontname: -FontForge-Everyday_Vast_Black_Original-Book-R-Normal--11-110-75-75-P-80-ISO10646-1
   Copyright: (null)

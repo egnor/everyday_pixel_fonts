@@ -1,3 +1,5 @@
+#include "u8g2_vexed_everyday_fonts.h"
+
 /*
   Fontname: -FontForge-Everyday_Typical_Bold-Book-R-Normal--7-70-75-75-P-62-ISO10646-1
   Copyright: (null)

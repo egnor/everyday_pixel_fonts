@@ -1,3 +1,5 @@
+#include "u8g2_vexed_everyday_fonts.h"
+
 /*
   Fontname: -FontForge-Everyday_Slight-Book-R-Normal--5-50-75-75-P-39-ISO10646-1
   Copyright: (null)
