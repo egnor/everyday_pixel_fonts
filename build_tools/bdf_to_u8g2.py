@@ -58,6 +58,8 @@ for bdf_path in bdf_paths:
     symbols.append(symbol := f"{font_name}_font")
     subproc.run(bdfconv, "-b0", "-f1", f"-n{symbol}", f"-o{c_path}", bdf_path)
 
+    # TODO: make 7-bit-ASCII reduced version? other reduced versions?
+
 #
 # write header file and all-fonts directory
 #
