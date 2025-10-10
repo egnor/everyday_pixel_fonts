@@ -45,15 +45,15 @@ wheels = [
 
 [[package]]
 name = "ok-logging-setup"
-version = "0.8"
+version = "0.9"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "mypy" },
     { name = "ruff" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/75/1f/174e096ff293297e6803669140772659b8daca420960da9fa7992df60515/ok_logging_setup-0.8.tar.gz", hash = "sha256:201d32c2a001851cf736e11eb1fe0333e790c8b1d4d01ad7d4b94724a71b5c05", size = 27878, upload-time = "2025-09-05T22:03:05.414Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/7e/8a/2689544f56013272bba2ce8fa34435bcdcfcc00453955b8180e2374c196f/ok_logging_setup-0.9.tar.gz", hash = "sha256:f76f89528981bf21de1e75c70c350e59d1a7f4cae85514df9a5b8fede555dadb", size = 32414, upload-time = "2025-10-10T00:07:37.763Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/16/57/78a8ec3300872ce49f71f50ecff3fc06eddd60f98b95ab16bfdbfd650d27/ok_logging_setup-0.8-py3-none-any.whl", hash = "sha256:096194e10dc60e3f2d8ddb4426354ad0c1a7a4f5d6bca8f5ef80c20208d60f3c", size = 9767, upload-time = "2025-09-05T22:03:04.269Z" },
+    { url = "https://files.pythonhosted.org/packages/e3/f5/3722717e993476613f965b8b1184b8745e99f5a22e089bfeef9c17dd3964/ok_logging_setup-0.9-py3-none-any.whl", hash = "sha256:fefcd7c57f8d62c450f4a18f9d111316c4596c011f959d99be90bf14244a4bcd", size = 9775, upload-time = "2025-10-10T00:07:36.904Z" },
 ]
 
 [[package]]
@@ -120,6 +120,6 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "ok-logging-setup", specifier = ">=0.8" },
+    { name = "ok-logging-setup", specifier = ">=0.9" },
     { name = "ok-subprocess-defaults", specifier = ">=0.1" },
 ]

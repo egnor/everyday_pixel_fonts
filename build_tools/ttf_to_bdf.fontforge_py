@@ -1,0 +1,42 @@
+#!/usr/bin/env -S fontforge -lang=py -script
+"""Converts .ttf files (distribution format) to .bdf (X11 bitmap format)
+This script runs in fontforge's embedded Python interpreter."""
+
+import fontforge
+import subprocess
+import sys
+from pathlib import Path
+
+top_dir = Path(__file__).parent.parent
+try: top_dir = top_dir.relative_to(Path.cwd())
+except ValueError: pass
+
+ttf_dir = top_dir / "copied_ttfs"
+ttf_paths = list(sorted(ttf_dir.glob("**/*.ttf")))
+if not ttf_paths:
+    raise SystemExit(f"💥 No .ttf files in: {ttf_dir}")
+
+bdf_dir = top_dir / "derived_bdfs"
+old_paths = list(sorted(bdf_dir.parent.glob("**/*.bdf")))
+for old_path in old_paths:
+    print(f"🗑️ Deleting: {old_path}")
+    old_path.unlink()
+
+for ttf_path in ttf_paths:
+    print(f"\n🔠 Converting: {ttf_path}")
+    ttf_font = fontforge.open(str(ttf_path))
+
+    pixel_size = ttf_font.em // 128
+    print(f"↕️ Generating bitmap: size={ttf_font.em} => pixels={pixel_size}")
+    ttf_font.selection.all()
+    ttf_font.bitmapSizes = ((pixel_size,),)
+    ttf_font.regenBitmaps(ttf_font.bitmapSizes)
+
+    bdf_path = bdf_dir / (ttf_path.stem + ".bdf")
+    bdf_path.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"👾 Saving bitmap: {bdf_path}")
+    ttf_font.generate(str(bdf_path))
+    ttf_font.close()
+
+print(f"\n🏁 Done converting {len(ttf_paths)} .ttf fonts to .bdf")

@@ -7,6 +7,6 @@ version = "0.1"
 requires-python = ">=3.12"
 
 dependencies = [
-    "ok-logging-setup>=0.8",
+    "ok-logging-setup>=0.9",
     "ok-subprocess-defaults>=0.1",
 ]
