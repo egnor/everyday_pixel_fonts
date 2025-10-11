@@ -91,10 +91,16 @@ int main(int argc, char* argv[]) {
       max_strlen, line_count, max_width, total_height
   );
 
+  if (max_width >= 2040 || total_height >= 2040) {
+    fprintf(stderr, "💥 Image too big (>= 2040x2040 pixels)\n");
+    return 1;
+  }
+
   u8g2_SetupBitmap(&u8g2, &u8g2_cb_r0, max_width, total_height);
   u8g2_SetFont(&u8g2, font);
   u8g2_SetFontRefHeightExtendedText(&u8g2);
-  u8g2_ClearBuffer(&u8g2);
+  u8g2_DrawBox(&u8g2, 0, 0, max_width, total_height);  // fill with black
+  u8g2_SetDrawColor(&u8g2, 0);  // white text, black background in bitmap
 
   for (int l = 0; l < line_count; ++l) {
     const int y = l * line_height + u8g2.font_ref_ascent;
