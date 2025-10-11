@@ -16,6 +16,7 @@ ttf_paths = list(sorted(ttf_dir.glob("**/*.ttf")))
 if not ttf_paths: raise SystemExit(f"💥 Missing: {ttf_dir}/**/*.ttf")
 
 bdf_dir = top_dir / "derived_bdfs"
+bdf_dir.mkdir(exist_ok=True)
 print(f"🗑️ Cleaning: {bdf_dir}")
 [p.unlink() for p in bdf_dir.glob("*.bdf")]
 
