@@ -9,7 +9,7 @@ import ok_subprocess_defaults
 import PIL.Image
 from pathlib import Path
 
-EXAMPLE_TEXT = """
+EXAMPLE_TEXT = r"""
 Angel Adept Blind Bodice Clique Coast Dunce Docile Enact Eosin
 Furlong Focal Gnome Gondola Human Hoist Inlet Iodine Justin Jocose
 Knoll Koala Linden Loads Milliner Modal Number Nodule Onset Oddball
@@ -70,17 +70,26 @@ XENON XOCHITL OF THE MIXED BOXCAR FOR THE SUFFIX ICEBOX EXXON.
 YEOMAN YONDER OF THE HYBRID ARROYO FOR THE DINGHY BRANDY SAYYID.
 ZEBRA ZOMBIE OF THE PRIZED OZONE FOR THE FRANZ ARROZ BUZZING.
 
-To my "friends" & "family" (don't worry?): "Hello, world!" [me@example.com]
-*Stars*, _underscores_, and `backticks`; 1234567890 < 9876543210 > 0x12345678
-https://example.com:8080/index.html?q=Hello%2C%20world%21#top
-C:\Program Files (x86)\Steam\steam.exe
-ip=192.168.3.47 net=255.255.255.0 gw=192.168.3.1
-email_rx = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$")
+Latin-1:
+DE Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.
+DK Høj bly gom vandt fræk sexquiz på wc.
+ES Queda gazpacho, fibra, látex, jamón, kiwi y viñas.
+FI Törkylempijävongahdus.
+FR Voyez le brick géant que j'examine près du wharf.
+HU Jó foxim és don Quijote húszwattos lámpánál ülve egy pár bűvös cipőt készít.
+IE Ċuaiġ bé ṁórṡáċ le dlúṫspád fíorḟinn trí hata mo ḋea-ṗorcáin ḃig.
+NO Jeg begynte å fortære en sandwich mens jeg kjørte taxi på vei til quiz.
+PT Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.
+SE Flygande bäckasiner söka hwila på mjuka tuvor.
 
-int main(int argc, char *argv[]) {
-  printf("Hello, world!\\n");
-  return 0;
-}
+Punctuation:
+EN  To my "friends" & "family" (don't worry?): "Hello, world!" [me@example.com]
+MD  *Stars*, _underscores_, and `backticks`; 12345678 < 87654321 > 0x12345678
+URL https://example.com:8080/index.html?q=Hello%2C%20world%21#top
+DOS C:\Program Files (x86)\Steam\steam.exe
+IP  ip=192.168.3.47 net=255.255.255.0 gw=192.168.3.1
+PY  email_rx = re.compile(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}$")
+C   int main(int argc, char *argv[]) { printf("Hello, world!\n"); return 0; }
 """.strip("\n")
 
 ok_logging_setup.install()
