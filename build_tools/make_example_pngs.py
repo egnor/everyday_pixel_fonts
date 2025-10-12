@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds 'make_bitmap' against u8g2 source tree and generates proof images."""
+"""Builds 'make_text_bitmap' against u8g2 tree, and generates proof images."""
 
 import argparse
 import io
@@ -105,8 +105,8 @@ if not lib_sources:
 
 build_dir = top_dir / "build.tmp"
 build_dir.mkdir(exist_ok=True)
-make_bitmap_source = top_dir / "build_tools" / "make_bitmap.c"
-make_bitmap = build_dir / "make_bitmap"
+make_bitmap_source = top_dir / "build_tools" / "make_text_bitmap.c"
+make_bitmap = build_dir / "make_text_bitmap"
 logging.info(f"\n🏗️ Building: {make_bitmap}")
 subproc.run(
     "gcc", "-O4", "-ffunction-sections", "-fdata-sections", "-Wl,--gc-sections",
@@ -124,4 +124,4 @@ for name in font_names:
     pbm_text = subproc.stdout_text(make_bitmap, name, input=text)
     pbm_stream = io.BytesIO(pbm_text.encode())
     image = PIL.Image.open(pbm_stream, formats=["ppm"])
-    image.save(png_path)
+    image.resize((image.width * 2, image.height * 2)).save(png_path)
