@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "u8g2.h"
-#include "u8g2_vexed_everyday_fonts.h"
+#include "everyday_u8g2_fonts.h"
 
 char buffer[65536];
 char const* lines[512];
