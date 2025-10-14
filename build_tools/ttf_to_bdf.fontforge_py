@@ -17,8 +17,6 @@ if not ttf_paths: raise SystemExit(f"💥 Missing: {ttf_dir}/**/*.ttf")
 
 bdf_dir = top_dir / "derived_bdfs"
 bdf_dir.mkdir(exist_ok=True)
-print(f"🗑️ Cleaning: {bdf_dir}")
-[p.unlink() for p in bdf_dir.glob("*.bdf")]
 
 for ttf_path in ttf_paths:
     print(f"\n🔠 Converting: {ttf_path}")
@@ -30,7 +28,11 @@ for ttf_path in ttf_paths:
     ttf_font.bitmapSizes = ((pixel_size,),)
     ttf_font.regenBitmaps(ttf_font.bitmapSizes)
 
-    bdf_path = bdf_dir / (ttf_path.stem + ".bdf")
+    for old_path in bdf_dir.glob(ttf_path.stem + "-*.bdf"):
+        print(f"🗑️ Removing: {old_path}")
+        old_path.unlink()
+
+    bdf_path = bdf_dir / ttf_path.with_suffix(".bdf").name
     print(f"👾 Saving bitmap: {bdf_path}")
     ttf_font.generate(str(bdf_path))
     ttf_font.close()
