@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds 'make_example_pbms' against u8g2 tree, converts output to png."""
+"""Builds 'make_proof_pbms' against u8g2 tree, converts output to png."""
 
 import argparse
 import io
@@ -32,8 +32,8 @@ if not lib_sources:
 
 build_dir = top_dir / "build.tmp"
 build_dir.mkdir(exist_ok=True)
-make_pbms_source = top_dir / "build_tools" / "make_example_pbms.c"
-make_pbms = build_dir / "make_example_pbms"
+make_pbms_source = top_dir / "build_tools" / "make_proof_pbms.c"
+make_pbms = build_dir / "make_proof_pbms"
 logging.info(f"\n🏗️ Building: {make_pbms}")
 subproc.run(
     "gcc", "-O4", "-ffunction-sections", "-fdata-sections", "-Wl,--gc-sections",
@@ -47,13 +47,13 @@ logging.info(f"\n🗑️ Cleaning: {build_dir}/*.pbm")
 logging.info(f"🖼️ Generating examples: {build_dir}/")
 subproc.run(os.path.join(".", make_pbms.relative_to(build_dir)), cwd=build_dir)
 
-png_dir = top_dir / "example_pngs"
+png_dir = top_dir / "proof_pngs"
 png_dir.mkdir(exist_ok=True)
 logging.info(f"\n🗑️ Cleaning: {png_dir}/*.png")
 [old_path.unlink() for old_path in png_dir.glob("*.png")]
 
 for pbm_path in build_dir.glob("*.pbm"):
-    png_path = png_dir / f"{pbm_path.stem}_example.png"
+    png_path = png_dir / f"{pbm_path.stem}_proof.png"
     logging.info(f"🖼️ Converting: {png_path}")
     image = PIL.Image.open(pbm_path, formats=["ppm"])
     image.resize((image.width * 2, image.height * 2)).save(png_path)

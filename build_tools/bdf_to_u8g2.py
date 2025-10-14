@@ -42,7 +42,7 @@ subproc.run("gcc", "-O4", f"-I{bdfconv_dir}", *bdfconv_sources, "-o", bdfconv)
 # convert fonts
 #
 
-bdf_dir = top_dir / "derived_bdfs"
+bdf_dir = top_dir / "produced_bdfs"
 bdf_paths = list(sorted(bdf_dir.glob("*.bdf")))
 if not bdf_paths: ok_logging_setup.exit(f"No *.bdf: {bdf_dir}")
 

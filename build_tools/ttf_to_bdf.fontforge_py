@@ -11,11 +11,11 @@ top_dir = Path(__file__).parent.parent
 try: top_dir = top_dir.relative_to(Path.cwd())
 except ValueError: pass
 
-ttf_dir = top_dir / "copied_ttfs"
+ttf_dir = top_dir / "original_ttfs"
 ttf_paths = list(sorted(ttf_dir.glob("**/*.ttf")))
 if not ttf_paths: raise SystemExit(f"💥 Missing: {ttf_dir}/**/*.ttf")
 
-bdf_dir = top_dir / "derived_bdfs"
+bdf_dir = top_dir / "processed_bdfs"
 bdf_dir.mkdir(exist_ok=True)
 
 for ttf_path in ttf_paths:
