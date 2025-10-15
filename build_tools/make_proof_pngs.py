@@ -57,7 +57,7 @@ logging.info(f"\n🗑️ Cleaning: {png_dir}/*.png")
 [old_path.unlink() for old_path in png_dir.glob("*.png")]
 
 for pbm_path in natsorted(build_dir.glob("*.pbm"), alg=ns.I | ns.P):
-    png_path = png_dir / f"{pbm_path.stem}_proof.png"
+    png_path = png_dir / f"{pbm_path.stem}-proof.png"
     logging.info(f"🖼️ Converting: {png_path}")
     image = PIL.Image.open(pbm_path, formats=["ppm"])
     image.resize((image.width * 2, image.height * 2)).save(png_path)
