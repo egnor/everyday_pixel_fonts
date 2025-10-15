@@ -3,6 +3,7 @@
 This script runs in fontforge's embedded Python interpreter."""
 
 import fontforge
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -15,8 +16,11 @@ ttf_dir = top_dir / "original_ttfs"
 ttf_paths = list(sorted(ttf_dir.glob("**/*.ttf")))
 if not ttf_paths: raise SystemExit(f"💥 Missing: {ttf_dir}/**/*.ttf")
 
-bdf_dir = top_dir / "processed_bdfs"
+bdf_dir = top_dir / "produced_bdfs"
 bdf_dir.mkdir(exist_ok=True)
+
+print(f"🗑️ Cleaning: {bdf_dir}/*.bdf")
+[old_path.unlink() for old_path in bdf_dir.glob("*.bdf")]
 
 for ttf_path in ttf_paths:
     print(f"\n🔠 Converting: {ttf_path}")
@@ -28,11 +32,11 @@ for ttf_path in ttf_paths:
     ttf_font.bitmapSizes = ((pixel_size,),)
     ttf_font.regenBitmaps(ttf_font.bitmapSizes)
 
-    for old_path in bdf_dir.glob(ttf_path.stem + "-*.bdf"):
-        print(f"🗑️ Removing: {old_path}")
-        old_path.unlink()
+    font_name = re.sub(r"_original$", "-v0", ttf_path.stem.lower())
+    if not re.search(r"-v\d+", font_name):
+        font_name += "-v1"
 
-    bdf_path = bdf_dir / ttf_path.with_suffix(".bdf").name
+    bdf_path = bdf_dir / (font_name + ".bdf")
     print(f"👾 Saving bitmap: {bdf_path}")
     ttf_font.generate(str(bdf_path))
     ttf_font.close()

@@ -10,57 +10,91 @@
 extern "C" {
 #endif
 
-extern const uint8_t everyday_ample_u8g2_font[];
-extern const uint8_t everyday_ample_black_u8g2_font[];
-extern const uint8_t everyday_ample_black_original_u8g2_font[];
-extern const uint8_t everyday_ample_blocky_u8g2_font[];
-extern const uint8_t everyday_ample_blocky_black_u8g2_font[];
-extern const uint8_t everyday_ample_blocky_bold_u8g2_font[];
-extern const uint8_t everyday_ample_bold_u8g2_font[];
-extern const uint8_t everyday_ample_bold_original_u8g2_font[];
-extern const uint8_t everyday_ample_original_u8g2_font[];
-extern const uint8_t everyday_slight_u8g2_font[];
-extern const uint8_t everyday_slight_black_u8g2_font[];
-extern const uint8_t everyday_slight_black_original_u8g2_font[];
-extern const uint8_t everyday_slight_blocky_u8g2_font[];
-extern const uint8_t everyday_slight_blocky_black_u8g2_font[];
-extern const uint8_t everyday_slight_blocky_bold_u8g2_font[];
-extern const uint8_t everyday_slight_bold_u8g2_font[];
-extern const uint8_t everyday_slight_bold_original_u8g2_font[];
-extern const uint8_t everyday_slight_original_u8g2_font[];
-extern const uint8_t everyday_standard_u8g2_font[];
-extern const uint8_t everyday_standard_black_u8g2_font[];
-extern const uint8_t everyday_standard_black_original_u8g2_font[];
-extern const uint8_t everyday_standard_blocky_u8g2_font[];
-extern const uint8_t everyday_standard_blocky_black_u8g2_font[];
-extern const uint8_t everyday_standard_blocky_bold_u8g2_font[];
-extern const uint8_t everyday_standard_bold_u8g2_font[];
-extern const uint8_t everyday_standard_bold_original_u8g2_font[];
-extern const uint8_t everyday_standard_original_u8g2_font[];
-extern const uint8_t everyday_tiny_u8g2_font[];
-extern const uint8_t everyday_tiny_black_u8g2_font[];
-extern const uint8_t everyday_tiny_black_original_u8g2_font[];
-extern const uint8_t everyday_tiny_blocky_u8g2_font[];
-extern const uint8_t everyday_tiny_blocky_black_u8g2_font[];
-extern const uint8_t everyday_tiny_blocky_bold_u8g2_font[];
-extern const uint8_t everyday_tiny_bold_u8g2_font[];
-extern const uint8_t everyday_tiny_bold_original_u8g2_font[];
-extern const uint8_t everyday_tiny_original_u8g2_font[];
-extern const uint8_t everyday_typical_u8g2_font[];
-extern const uint8_t everyday_typical_black_u8g2_font[];
-extern const uint8_t everyday_typical_black_original_u8g2_font[];
-extern const uint8_t everyday_typical_bold_u8g2_font[];
-extern const uint8_t everyday_typical_bold_original_u8g2_font[];
-extern const uint8_t everyday_typical_original_u8g2_font[];
-extern const uint8_t everyday_vast_u8g2_font[];
-extern const uint8_t everyday_vast_black_u8g2_font[];
-extern const uint8_t everyday_vast_black_original_u8g2_font[];
-extern const uint8_t everyday_vast_blocky_u8g2_font[];
-extern const uint8_t everyday_vast_blocky_black_u8g2_font[];
-extern const uint8_t everyday_vast_blocky_bold_u8g2_font[];
-extern const uint8_t everyday_vast_bold_u8g2_font[];
-extern const uint8_t everyday_vast_bold_original_u8g2_font[];
-extern const uint8_t everyday_vast_original_u8g2_font[];
+#define everyday_ample_u8g2 everyday_ample_v1_u8g2
+#define everyday_ample_black_u8g2 everyday_ample_black_v1_u8g2
+#define everyday_ample_blocky_u8g2 everyday_ample_blocky_v1_u8g2
+#define everyday_ample_blocky_black_u8g2 everyday_ample_blocky_black_v1_u8g2
+#define everyday_ample_blocky_bold_u8g2 everyday_ample_blocky_bold_v1_u8g2
+#define everyday_ample_bold_u8g2 everyday_ample_bold_v1_u8g2
+#define everyday_slight_u8g2 everyday_slight_v1_u8g2
+#define everyday_slight_black_u8g2 everyday_slight_black_v1_u8g2
+#define everyday_slight_blocky_u8g2 everyday_slight_blocky_v1_u8g2
+#define everyday_slight_blocky_black_u8g2 everyday_slight_blocky_black_v1_u8g2
+#define everyday_slight_blocky_bold_u8g2 everyday_slight_blocky_bold_v1_u8g2
+#define everyday_slight_bold_u8g2 everyday_slight_bold_v1_u8g2
+#define everyday_standard_u8g2 everyday_standard_v1_u8g2
+#define everyday_standard_black_u8g2 everyday_standard_black_v1_u8g2
+#define everyday_standard_blocky_u8g2 everyday_standard_blocky_v1_u8g2
+#define everyday_standard_blocky_black_u8g2 everyday_standard_blocky_black_v1_u8g2
+#define everyday_standard_blocky_bold_u8g2 everyday_standard_blocky_bold_v1_u8g2
+#define everyday_standard_bold_u8g2 everyday_standard_bold_v1_u8g2
+#define everyday_tiny_u8g2 everyday_tiny_v1_u8g2
+#define everyday_tiny_black_u8g2 everyday_tiny_black_v1_u8g2
+#define everyday_tiny_blocky_u8g2 everyday_tiny_blocky_v1_u8g2
+#define everyday_tiny_blocky_black_u8g2 everyday_tiny_blocky_black_v1_u8g2
+#define everyday_tiny_blocky_bold_u8g2 everyday_tiny_blocky_bold_v1_u8g2
+#define everyday_tiny_bold_u8g2 everyday_tiny_bold_v1_u8g2
+#define everyday_typical_u8g2 everyday_typical_v1_u8g2
+#define everyday_typical_black_u8g2 everyday_typical_black_v1_u8g2
+#define everyday_typical_bold_u8g2 everyday_typical_bold_v1_u8g2
+#define everyday_vast_u8g2 everyday_vast_v1_u8g2
+#define everyday_vast_black_u8g2 everyday_vast_black_v1_u8g2
+#define everyday_vast_blocky_u8g2 everyday_vast_blocky_v1_u8g2
+#define everyday_vast_blocky_black_u8g2 everyday_vast_blocky_black_v1_u8g2
+#define everyday_vast_blocky_bold_u8g2 everyday_vast_blocky_bold_v1_u8g2
+#define everyday_vast_bold_u8g2 everyday_vast_bold_v1_u8g2
+
+extern uint8_t const everyday_ample_v0_u8g2[];
+extern uint8_t const everyday_ample_v1_u8g2[];
+extern uint8_t const everyday_ample_black_v0_u8g2[];
+extern uint8_t const everyday_ample_black_v1_u8g2[];
+extern uint8_t const everyday_ample_blocky_v1_u8g2[];
+extern uint8_t const everyday_ample_blocky_black_v1_u8g2[];
+extern uint8_t const everyday_ample_blocky_bold_v1_u8g2[];
+extern uint8_t const everyday_ample_bold_v0_u8g2[];
+extern uint8_t const everyday_ample_bold_v1_u8g2[];
+extern uint8_t const everyday_slight_v0_u8g2[];
+extern uint8_t const everyday_slight_v1_u8g2[];
+extern uint8_t const everyday_slight_black_v0_u8g2[];
+extern uint8_t const everyday_slight_black_v1_u8g2[];
+extern uint8_t const everyday_slight_blocky_v1_u8g2[];
+extern uint8_t const everyday_slight_blocky_black_v1_u8g2[];
+extern uint8_t const everyday_slight_blocky_bold_v1_u8g2[];
+extern uint8_t const everyday_slight_bold_v0_u8g2[];
+extern uint8_t const everyday_slight_bold_v1_u8g2[];
+extern uint8_t const everyday_standard_v0_u8g2[];
+extern uint8_t const everyday_standard_v1_u8g2[];
+extern uint8_t const everyday_standard_black_v0_u8g2[];
+extern uint8_t const everyday_standard_black_v1_u8g2[];
+extern uint8_t const everyday_standard_blocky_v1_u8g2[];
+extern uint8_t const everyday_standard_blocky_black_v1_u8g2[];
+extern uint8_t const everyday_standard_blocky_bold_v1_u8g2[];
+extern uint8_t const everyday_standard_bold_v0_u8g2[];
+extern uint8_t const everyday_standard_bold_v1_u8g2[];
+extern uint8_t const everyday_tiny_v0_u8g2[];
+extern uint8_t const everyday_tiny_v1_u8g2[];
+extern uint8_t const everyday_tiny_black_v0_u8g2[];
+extern uint8_t const everyday_tiny_black_v1_u8g2[];
+extern uint8_t const everyday_tiny_blocky_v1_u8g2[];
+extern uint8_t const everyday_tiny_blocky_black_v1_u8g2[];
+extern uint8_t const everyday_tiny_blocky_bold_v1_u8g2[];
+extern uint8_t const everyday_tiny_bold_v0_u8g2[];
+extern uint8_t const everyday_tiny_bold_v1_u8g2[];
+extern uint8_t const everyday_typical_v0_u8g2[];
+extern uint8_t const everyday_typical_v1_u8g2[];
+extern uint8_t const everyday_typical_black_v0_u8g2[];
+extern uint8_t const everyday_typical_black_v1_u8g2[];
+extern uint8_t const everyday_typical_bold_v0_u8g2[];
+extern uint8_t const everyday_typical_bold_v1_u8g2[];
+extern uint8_t const everyday_vast_v0_u8g2[];
+extern uint8_t const everyday_vast_v1_u8g2[];
+extern uint8_t const everyday_vast_black_v0_u8g2[];
+extern uint8_t const everyday_vast_black_v1_u8g2[];
+extern uint8_t const everyday_vast_blocky_v1_u8g2[];
+extern uint8_t const everyday_vast_blocky_black_v1_u8g2[];
+extern uint8_t const everyday_vast_blocky_bold_v1_u8g2[];
+extern uint8_t const everyday_vast_bold_v0_u8g2[];
+extern uint8_t const everyday_vast_bold_v1_u8g2[];
 
 #ifdef __cplusplus
 }  /* extern "C" */

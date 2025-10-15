@@ -10,6 +10,13 @@ python_compile = false
 _.python.venv = { path = "venv.tmp", create = true }
 UV_PROJECT_ENVIRONMENT = "{{config_root}}/venv.tmp"
 
+[tasks.rebuild]
+run = [
+  "build_tools/ttf_to_bdf.fontforge_py",
+  "build_tools/bdf_to_u8g2.py",
+  "build_tools/make_proof_pngs.py",
+]
+
 [hooks]
 postinstall = [
   "git lfs install --local",
