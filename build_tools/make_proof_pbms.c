@@ -4,7 +4,7 @@
 #include <string.h>
 
 #include "u8g2.h"
-#include "everyday_u8g2_fonts.h"
+#include "everyday_pixel_fonts.h"
 
 u8g2_t u8g2;
 
@@ -98,7 +98,7 @@ char const* const text_lines[] = {
 
 static void make_example(struct everyday_entry const* entry) {
   u8g2_SetupBitmap(&u8g2, &u8g2_cb_r0, 10, 10);
-  u8g2_SetFont(&u8g2, entry->font);
+  u8g2_SetFont(&u8g2, entry->u8g2_font);
   u8g2_SetFontRefHeightExtendedText(&u8g2);
 
   snprintf(
@@ -133,7 +133,7 @@ static void make_example(struct everyday_entry const* entry) {
 
   /* Draw image in stripes to avoid u8g2 64K buffer size limit */
   u8g2_SetupBitmap(&u8g2, &u8g2_cb_r0, image_w, line_h);
-  u8g2_SetFont(&u8g2, entry->font);
+  u8g2_SetFont(&u8g2, entry->u8g2_font);
   u8g2_SetFontRefHeightExtendedText(&u8g2);
 
   char bitmap_filename[128];

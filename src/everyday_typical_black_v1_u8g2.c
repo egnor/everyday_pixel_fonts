@@ -1,4 +1,10 @@
-#include "everyday_u8g2_fonts.h"
+#include "everyday_pixel_fonts.h"
+
+#ifdef __GNUC__
+#define U8G2_FONT_SECTION(name) __attribute__((section(".text." name)))
+#else
+#define U8G2_FONT_SECTION(name)
+#endif
 
 /*
   Fontname: -FontForge-Everyday_Typical_Black-Book-R-Normal--7-70-75-75-P-63-ISO10646-1
