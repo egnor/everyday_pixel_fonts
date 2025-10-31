@@ -11,7 +11,7 @@ The original "Everyday" series of pixel fonts were designed by VEXED with suppor
 Browse [the proof images in the repository](proof_pngs) to see what the fonts look like, then:
 
 1. Use [u8g2](https://github.com/olikraus/u8g2) (PRs welcome to support Adafruit-GFX-Library, etc)
-2. Use this library, it's in the Arduino registry as "Everyday Pixel Fonts" (PRs welcome to support platformio, etc)
+2. Use this library, it's registered as "Everyday Pixel Fonts" (PRs welcome to support platformio, etc)
 3. `#include <everyday_pixel_fonts.h>`
 4. Reference any of [the font names defined in that header](src/everyday_pixel_fonts.h) (versioned or unversioned) with `.setFont(...)`
 
