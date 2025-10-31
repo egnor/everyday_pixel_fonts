@@ -1,6 +1,8 @@
 # everyday_pixel_fonts
 
-These are conversions of [VEXED's "Everyday" pixel fonts](https://v3x3d.itch.io/everyday-typical) for embedded systems (Arduino, etc) using the [u8g2 small-display-driver library](https://github.com/olikraus/u8g2/wiki).
+<p><img width="410" alt="Microcontroller connected to display showing 'Hello, World!'" src="https://github.com/user-attachments/assets/3d664ded-9d3b-4137-9130-8b46de4a8297" /></p>
+
+Conversions of [VEXED's "Everyday" pixel fonts](https://v3x3d.itch.io/everyday-typical) for embedded systems (Arduino, etc) using the [u8g2 display driver library](https://github.com/olikraus/u8g2/wiki).
 
 The original "Everyday" series of pixel fonts were designed by VEXED with support from me (Dan Egnor). They are licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.en), [as is this repository](LICENSE.txt). I highly recommend checking out [VEXED's site](https://v3x3d.itch.io/) which has tons of fun pixel art and a variety of nifty fonts on offer! If you find these fonts useful please [support the artist](https://www.patreon.com/c/V3X3D/posts).
 
