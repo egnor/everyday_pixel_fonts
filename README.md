@@ -1,4 +1,4 @@
-# everyday_pixel_fonts
+# "Everyday Pixel" fonts for Arduino-driven displays with u8g2
 
 <p><img width="410" alt="Microcontroller connected to display showing 'Hello, World!'" src="https://github.com/user-attachments/assets/3d664ded-9d3b-4137-9130-8b46de4a8297" /></p>
 
